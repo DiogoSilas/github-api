@@ -7,7 +7,7 @@ const screen = {
             <div class="data">
                 <h1>${user.name ?? 'Não possui nome.'}</h1>
                 <p>${user.bio ?? 'Não possui bio.'}</p>
-                <p><a href="${user.blog ?? '#'}" target="_blank">Blog</a></p>
+                <p><a href="${user.blog ?? '#'}" target="_self">Blog</a></p>
             </div>
         </div>`
 
@@ -25,6 +25,9 @@ const screen = {
             
             </div>`
         };
+    },
+    renderNotFound(){
+        this.userProfile.innerHTML = "<h3>Usuário não encontrado.</h3>"
     }
 };
 
